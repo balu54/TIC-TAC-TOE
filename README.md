@@ -6,64 +6,110 @@ from tkinter import messagebox
 window = Tk()
 
 window.minsize(500, 750)
+
 window.maxsize(501, 750)
+
 window.title("TIC TAC TOE")
+
 window.iconbitmap("C:/Users/solob/PycharmProjects/programs/Images/tic.ico")
 
 
 def allset():
+
     reset()
+    
     restart()
 
 
 
 
 x_win = 0
+
 o_win = 0
+
 tie = 0
+
 click = True
+
 c = 0
+
 winneer = False
 
 
+
 def disable():
+    
     b1.config(state="disabled")
+    
     b2.config(state="disabled")
+    
     b3.config(state="disabled")
+    
     b4.config(state="disabled")
+    
     b5.config(state="disabled")
+    
     b6.config(state="disabled")
+    
     b7.config(state="disabled")
+    
     b8.config(state="disabled")
+    
     b9.config(state="disabled")
 
 
+
+
+
 def restart():
+
     global c
+    
     c = 0
+    
     Buttons()
 
 
+
+
 def reset():
+    
     global x_win, o_win, tie, c
+    
     x_win = 0
+    
     o_win = 0
+    
     c = 0
+    
     tie = 0
+    
     label()
 
 
-def won():
-    global c, x_win, o_win, tie
-    if (b1["text"] == "X" and b2["text"] == "X" and b3["text"] == "X") or (
-            b1["text"] == "O" and b2["text"] == "O" and b3["text"] == "O"):
 
+
+def won():
+    
+    global c, x_win, o_win, tie
+    
+    if (b1["text"] == "X" and b2["text"] == "X" and b3["text"] == "X") or (
+    
+        b1["text"] == "O" and b2["text"] == "O" and b3["text"] == "O"):
+
+        
         b1.config(bg="black", fg="white")
+        
         b2.config(bg="black", fg="white")
+        
         b3.config(bg="black", fg="white")
+        
         if b1["text"] == "X":
+        
             x_win += 1
+        
             messagebox.showinfo("TICTACTOE", "X is the winner")
+        
         else:
             o_win += 1
             messagebox.showinfo("TICTACTOE", "O is the winner")
