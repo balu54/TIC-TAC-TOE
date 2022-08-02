@@ -236,7 +236,9 @@ def won():
 
 
 def clicked(b):
+    
     global click, c
+    
     if click == True and b["text"] == "":
         b.config(text="X", bg="red")
         c += 1
@@ -252,6 +254,7 @@ def clicked(b):
 
 
 def label():
+
     global x_win, o_win, tie
     l = Label(window, text="X-WINS", font=("Ariel", 20)).grid(row=3, column=0)
     ll = Label(window, text="O-WINS", font=("Ariel", 20)).grid(row=3, column=1)
@@ -262,6 +265,7 @@ def label():
 
 
 def Buttons():
+
     global b1, b2, b3, b4, b5, b6, b7, b8, b9
     b1 = Button(window, font=("Ariel", 20), width=10, height=5, text="", command=lambda: clicked(b1))
     b1.grid(row=0, column=0)
