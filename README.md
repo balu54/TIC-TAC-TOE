@@ -1,7 +1,10 @@
 from tkinter import *
+
 from tkinter import messagebox
 
+
 window = Tk()
+
 window.minsize(500, 750)
 window.maxsize(501, 750)
 window.title("TIC TAC TOE")
